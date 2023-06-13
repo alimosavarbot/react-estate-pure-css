@@ -1,0 +1,87 @@
+.v-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.v-left {
+  justify-content: flex-start;
+}
+
+.v-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.accordion {
+  border: none !important;
+}
+
+.accordionItem {
+  margin-top: 1rem !important;
+  background-color: #fff;
+  border: 0.8px solid rgba(238, 238, 255, 1);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.accordionItem.expanded {
+  box-shadow: var(--shadow);
+  border-radius: 6px;
+}
+
+.accordionButton {
+  display: flex;
+  padding: 1rem;
+  width: 100%;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.icon {
+  background-color: #eeeeff;
+  padding: 10px;
+  border-radius: 5px;
+  height: auto;
+  color: #fff;
+  height: 3rem;
+  transition: all 300ms ease-in;
+}
+
+.icon svg {
+  fill: var(--blue);
+}
+
+.arrowIcon {
+  border-radius: 50%;
+}
+
+.accordionButton .primaryText {
+  font-size: 1.1rem;
+}
+
+.v-left .image-container {
+  transition: all 1s ease;
+}
+
+.v-left .image-container:hover {
+  border-radius: 15rem 15rem 1rem 15rem;
+}
+
+@media (max-width: 880px) {
+  .v-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 880px) {
+  .v-right span {
+    display: flex;
+    justify-content: center;
+  }
+}

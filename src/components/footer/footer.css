@@ -1,0 +1,41 @@
+.f-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer--logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer--menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.footer--menu > span {
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .f-wrapper {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer--logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer--information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+  }
+}
