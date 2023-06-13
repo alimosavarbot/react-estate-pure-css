@@ -1,6 +1,7 @@
 import "./hero.css";
 import { HiLocationMarker } from "react-icons/hi";
 import CountUp from "react-countup";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
@@ -9,21 +10,36 @@ const Hero = () => {
         <div className="hero-left flexColStart">
           <div className="hero-title">
             <div className="orange-circle" />
-            <h1>
+            <motion.h1
+              initial={{ y: "2rem", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{
+                duration: 2,
+                type: "tween",
+              }}
+            >
               Discover <br />
               Most Suitable <br />
               Property
-            </h1>
+            </motion.h1>
           </div>
 
-          <div className="hero-des flexColStart">
+          <motion.div
+            className="hero-des flexColStart"
+            initial={{ y: "2rem", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              duration: 2,
+              type: "tween",
+            }}
+          >
             <span className="secondaryText">
               Find a variety of properties that suit you very easility
             </span>
             <span className="secondaryText">
               Forget all difficulaties in finding a residence for you
             </span>
-          </div>
+          </motion.div>
 
           <div className="search-bar flexCenter">
             <HiLocationMarker color="var(--blue)" size={25} />
@@ -31,7 +47,15 @@ const Hero = () => {
             <button className="button">Search</button>
           </div>
 
-          <div className="stats flexCenter">
+          <motion.div
+            className="stats flexCenter"
+            initial={{ y: "2rem", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              duration: 2,
+              type: "tween",
+            }}
+          >
             <div className="stat flexColCenter">
               <span>
                 <CountUp start={8800} end={9000} duration={4} />
@@ -58,13 +82,21 @@ const Hero = () => {
 
               <span className="secondaryText">Award Winning</span>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         <div className="hero-right flexCenter">
-          <div className="image-container">
+          <motion.div
+            className="image-container"
+            initial={{ x: "2rem", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              duration: 2,
+              type: "tween",
+            }}
+          >
             <img src={require("../../assets/images/hero-image.png")} alt="" />
-          </div>
+          </motion.div>
         </div>
       </div>
 
